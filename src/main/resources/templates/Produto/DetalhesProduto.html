@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>ProdutosApp</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <h1> Produto </h1>
+        <h3><a href="/Projetos/Globalimpact/templates/Index.html?_ijt=9jtmd4qajndcouet46l976fh16&_ij_reload=RELOAD_ON_SAVE" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>button</a>Lista de Produtos</h3>>
+    <div th:each="produto : ${produto}">
+        <div class="row">
+            <p>Nome: <span th:text="${produto.nome}"></span></p>
+            <p>Categoria: <span th:text="${produto.categoria}"></span></p>
+            <p>Tipo: <span th:text="${produto.tipo}"></span></p>
+            <p>Validade: <span th:text="${produto.validade}"></span></p>
+        </div>
+    <form method="post">
+       Id do Produto: <input type="text" value=""name="id"/>
+        Composição Quimica do produto: <input type="text" value="" name="composicao"/>
+        <button class="waves-effect waves-light btn" type="submit">Buscar</button>
+
+    </form>
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</div>
+</body>
+</html>
